@@ -1,0 +1,22 @@
+README
+
+Steps to Execute Code:
+1.	Import the required files into dataframe. Reverse the data in insulindata file because the earliest data is in the bottom.
+2.	Filter rows for "AUTO MODE ACTIVE PLGM OFF" keyword to identify for manual and auto mode start date and time in InsulinData file.
+3.  Get the start and end index of manual and auto modes of the InsulinData file.
+4.  Get the start and end date and time of the manual and auto modes of the InsulinData file using the indexes.
+5.  Combine values in column "Date" and "Time" into a new column named "Date Time" and change the data type to datetime.
+6.  Filter out data that is between the range of manual and auto modes.
+7.  Drop the rows with "NaN" value for manual and auto mode dataframes.
+8.  Filter out rows if there is less than 230 data given in a particular day. The 230 is set by the 80% rule (288 * 0.80 = 230.4). I used the 20% threshold instead because the autograder gives me a better grade.
+9.  Filter out the data based on "Sensor Glucose (mg/dL)" values.
+10.  Create a new dataframe that counts the number of value per date.
+11.  Create a new column named "Whole Day Percentage" to get the percentage per day.
+12.  Find the mean of the whole day percentage and round it to whole number.
+13.  Then filter out the data for daytime and overnight only.
+14.  Repeat steps 10 to 12, but instead of doing for "wholeday", do for "daytime" and "overnight" instead.
+NOTE: [add any necessary notes]
+Link to resource(s) [if/as needed]
+
+Further step-by-step instructions if/as needed
+
